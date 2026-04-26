@@ -1,0 +1,9 @@
+{
+  "home": { "welcome": "Welcome back", "new_game": "New Game", "daily_puzzle": "Daily Puzzle", "rating": "Rating", "recent_games": "Recent Games", "no_games": "No games yet. Start playing!" },
+  "game": { "your_turn": "Your turn", "thinking": "Thinking...", "you_won": "You won!", "you_lost": "You lost", "stalemate": "Stalemate", "draw": "Draw", "resigned": "You resigned", "new_game": "New Game", "undo": "Undo", "flip": "Flip Board", "start_game": "Start Game", "play_as": "Play as", "white": "White", "black": "Black", "difficulty": "Difficulty" },
+  "puzzle": { "find_best": "Find the best move", "solved": "Solved!", "attempts": "Attempts", "hint": "Hint", "next": "Next" },
+  "auth": { "sign_in": "Sign In", "register": "Register", "username": "Username", "password": "Password", "signing_in": "Signing in...", "creating": "Creating...", "no_account": "Don't have an account?", "have_account": "Already have an account?", "play_offline": "Play Offline" },
+  "profile": { "guest": "Guest", "stats": "Stats", "games": "Games", "wins": "Wins", "losses": "Losses", "settings": "Settings", "sign_out": "Sign Out" },
+  "settings": { "title": "Settings", "language": "Language" },
+  "nav": { "home": "Home", "play": "Play", "puzzles": "Puzzles", "profile": "Profile" }
+}

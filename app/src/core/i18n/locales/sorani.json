@@ -1,0 +1,9 @@
+{
+  "home": { "welcome": "بەخێربێیتەوە", "new_game": "یاری نوێ", "daily_puzzle": "مەتەڵی ڕۆژ", "rating": "ڕیزبەندی", "recent_games": "یاریەکانی پێشوو", "no_games": "هێشتا یاری نییە. دەست پێ بکە!" },
+  "game": { "your_turn": "نۆرەی تۆیە", "thinking": "بیرکردنەوە...", "you_won": "تۆ بردوویەتی!", "you_lost": "تۆ دۆڕا", "stalemate": "یەکسانبوون", "draw": "یەکسانبوون", "resigned": "تۆ دەستگەیشت", "new_game": "یاری نوێ", "undo": "گەڕانەوە", "flip": "پێچانەوە", "start_game": "دەستپێکردن", "play_as": "یاری بکە وەک", "white": "سپی", "black": "ڕەش", "difficulty": "ئاستی سەختی" },
+  "puzzle": { "find_best": "باشترین جوڵە بدۆزەرەوە", "solved": "چارەسەرکرا!", "attempts": "هەوڵەکان", "hint": "ئامۆژگاری", "next": "دواتر" },
+  "auth": { "sign_in": "چوونەژوورەوە", "register": "تۆمارکردن", "username": "ناوی بەکارهێنەر", "password": "وشەی نهێنی", "signing_in": "چوونەژوورەوە...", "creating": "دروستکردن...", "no_account": "هەژمارێکت نییە؟", "have_account": "هەژمارێکت هەیە؟", "play_offline": "یاری ئۆفلاین" },
+  "profile": { "guest": "میوان", "stats": "ئامارەکان", "games": "یاریەکان", "wins": "سەرکەوتنەکان", "losses": "دۆڕانەکان", "settings": "ڕێکخستنەکان", "sign_out": "چوونەدەرەوە" },
+  "settings": { "title": "ڕێکخستنەکان", "language": "زمان" },
+  "nav": { "home": "سەرەتا", "play": "یاری", "puzzles": "مەتەڵ", "profile": "پرۆفایل" }
+}

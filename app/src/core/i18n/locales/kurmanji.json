@@ -1,0 +1,9 @@
+{
+  "home": { "welcome": "Bixêr hatî", "new_game": "Lîstika nû", "daily_puzzle": "Puzzla rojê", "rating": "Xal", "recent_games": "Lîstikên berê", "no_games": "Hîn lîstik tune. Bide dest pê kirin!" },
+  "game": { "your_turn": "Dora te ye", "thinking": "Tê fikirîn...", "you_won": "Te qezenc kir!", "you_lost": "Te winda kir", "stalemate": "Patiyabûn", "draw": "Patiyabûn", "resigned": "Te dev jê berda", "new_game": "Lîstika nû", "undo": "Vegerîne", "flip": "Bizivirîne", "start_game": "Bide dest pê kirin", "play_as": "Wekî bilîze", "white": "Spî", "black": "Reş", "difficulty": "Asta dijwarî" },
+  "puzzle": { "find_best": "Tevgera çêtirîn bibîne", "solved": "Çareser bû!", "attempts": "Hewldan", "hint": "Îkaz", "next": "Paşê" },
+  "auth": { "sign_in": "Têkevê", "register": "Qeyd bibe", "username": "Navê bikarhêner", "password": "Şîfre", "signing_in": "Têketin...", "creating": "Afirandin...", "no_account": "Hesabê te tune ye?", "have_account": "Hesabê te heye?", "play_offline": "Offline bilîze" },
+  "profile": { "guest": "Mêvan", "stats": "Statîstîk", "games": "Lîstik", "wins": "Serkeftin", "losses": "Têkçûn", "settings": "Mîheng", "sign_out": "Derkeve" },
+  "settings": { "title": "Mîheng", "language": "Ziman" },
+  "nav": { "home": "Mal", "play": "Lîstik", "puzzles": "Puzzle", "profile": "Profîl" }
+}

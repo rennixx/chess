@@ -1,4 +1,5 @@
 import React from "react";
+import { View } from "react-native";
 import DarkBishop from "../assets/dark_bishop.svg";
 import DarkKing from "../assets/dark_king.svg";
 import DarkKnight from "../assets/dark_knight.svg";
@@ -12,22 +13,9 @@ import LightPawn from "../assets/light_pawn.svg";
 import LightQueen from "../assets/light_queen.svg";
 import LightRook from "../assets/light_rook.svg";
 
-const PIECE_MAP: Record<
-  string,
-  React.FC<{ width?: number; height?: number }>
-> = {
-  pb: DarkPawn,
-  nb: DarkKnight,
-  bb: DarkBishop,
-  rb: DarkRook,
-  qb: DarkQueen,
-  kb: DarkKing,
-  pw: LightPawn,
-  nw: LightKnight,
-  bw: LightBishop,
-  rw: LightRook,
-  qw: LightQueen,
-  kw: LightKing,
+const PIECE_MAP: Record<string, React.FC<{ width?: number; height?: number }>> = {
+  pb: DarkPawn, nb: DarkKnight, bb: DarkBishop, rb: DarkRook, qb: DarkQueen, kb: DarkKing,
+  pw: LightPawn, nw: LightKnight, bw: LightBishop, rw: LightRook, qw: LightQueen, kw: LightKing,
 };
 
 interface PieceProps {
@@ -40,5 +28,9 @@ export function Piece({ piece, size }: PieceProps) {
   const key = `${piece.type}${piece.color}`;
   const SvgComponent = PIECE_MAP[key];
   if (!SvgComponent) return null;
-  return <SvgComponent width={size} height={size} />;
+  return (
+    <View style={{ width: size, height: size, alignItems: "center", justifyContent: "center", zIndex: 10, elevation: 10, marginLeft: -size * 0.1 }}>
+      <SvgComponent width={size} height={size} />
+    </View>
+  );
 }

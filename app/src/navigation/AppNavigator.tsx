@@ -1,4 +1,5 @@
 import React from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -60,8 +61,14 @@ function BottomTabs() {
 export function AppNavigator() {
   const { isTablet } = useResponsive();
   return (
-    <NavigationContainer>
-      {isTablet ? <Sidebar /> : <BottomTabs />}
-    </NavigationContainer>
+    <SafeAreaView style={styles.safeArea} edges={["top", "bottom"]}>
+      <NavigationContainer>
+        {isTablet ? <Sidebar /> : <BottomTabs />}
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  safeArea: { flex: 1, backgroundColor: Colors.background },
+});

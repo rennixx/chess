@@ -38,6 +38,8 @@ export function PuzzleScreen() {
     };
   };
 
+  if (!chess) return <View style={styles.container}><Text style={[Typography.body, { color: Colors.textSecondary }]}>Loading puzzle...</Text></View>;
+
   return (
     <View style={styles.container}>
       <Text style={[Typography.heading, { color: Colors.textPrimary }]}>{solved ? "Solved!" : "Find the best move"}</Text>

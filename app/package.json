@@ -35,8 +35,10 @@
     "@types/react": "~19.1.0",
     "babel-preset-expo": "^54.0.10",
     "jest": "^30.3.0",
+    "jest-expo": "^55.0.16",
     "nativewind": "^4.2.3",
     "react-native-svg-transformer": "^1.5.3",
+    "react-native-worklets-core": "^1.6.3",
     "tailwindcss": "^3.4.19",
     "ts-jest": "^29.4.9",
     "typescript": "~5.9.2"

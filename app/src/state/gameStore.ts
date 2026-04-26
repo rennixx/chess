@@ -1,8 +1,14 @@
 import { create } from "zustand";
 import { Chess, type Square } from "chess.js";
-import { saveGame } from "../core/storage/database";
 
 let currentGameId = "";
+
+async function persistGame(data: Parameters<typeof import("../core/storage/database").saveGame>[0]) {
+  try {
+    const { saveGame } = await import("../core/storage/database");
+    await saveGame(data);
+  } catch {}
+}
 
 export type GameStatus = "playing" | "checkmate" | "stalemate" | "draw" | "resigned";
 export type GameMode = "ai" | "async" | "local";
@@ -65,7 +71,7 @@ export const useGameStore = create<GameState & GameActions>((set, get) => ({
       lastMove: null,
     });
     currentGameId = `local_${Date.now()}`;
-    saveGame({ id: currentGameId, fen: chess.fen(), mode, status: "playing" });
+    persistGame({ id: currentGameId, fen: chess.fen(), mode, status: "playing" });
   },
 
   makeMove: ({ from, to, promotion }) => {
@@ -82,7 +88,7 @@ export const useGameStore = create<GameState & GameActions>((set, get) => ({
         legalMoves: [],
         lastMove: { from, to },
       });
-      saveGame({
+      persistGame({
         id: currentGameId,
         fen: state.chess.fen(),
         pgn: state.chess.pgn(),

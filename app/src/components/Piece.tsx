@@ -1,16 +1,16 @@
 import React from "react";
-import DarkBishop from "../../../icons/dark_bishop.svg";
-import DarkKing from "../../../icons/dark_king.svg";
-import DarkKnight from "../../../icons/dark_knight.svg";
-import DarkPawn from "../../../icons/dark_pawn.svg";
-import DarkQueen from "../../../icons/dark_queen.svg";
-import DarkRook from "../../../icons/dark_rook.svg";
-import LightBishop from "../../../icons/light_bishop.svg";
-import LightKing from "../../../icons/light_king.svg";
-import LightKnight from "../../../icons/light_knight.svg";
-import LightPawn from "../../../icons/light_pawn.svg";
-import LightQueen from "../../../icons/light_queen.svg";
-import LightRook from "../../../icons/light_rook.svg";
+import DarkBishop from "../assets/dark_bishop.svg";
+import DarkKing from "../assets/dark_king.svg";
+import DarkKnight from "../assets/dark_knight.svg";
+import DarkPawn from "../assets/dark_pawn.svg";
+import DarkQueen from "../assets/dark_queen.svg";
+import DarkRook from "../assets/dark_rook.svg";
+import LightBishop from "../assets/light_bishop.svg";
+import LightKing from "../assets/light_king.svg";
+import LightKnight from "../assets/light_knight.svg";
+import LightPawn from "../assets/light_pawn.svg";
+import LightQueen from "../assets/light_queen.svg";
+import LightRook from "../assets/light_rook.svg";
 
 const PIECE_MAP: Record<
   string,

@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { Card } from "../../components/ui/Card";
 import { useSettingsStore } from "../../state/settingsStore";
+import { setLocale } from "../../core/i18n";
 import { Colors, Typography, Spacing, Radius } from "../../utils/constants";
 
 const LANGUAGES = [
@@ -21,7 +22,10 @@ export function SettingsScreen() {
         <Text style={[Typography.bodyBold, { color: Colors.textPrimary, marginBottom: Spacing.md }]}>Language</Text>
         <View style={styles.langRow}>
           {LANGUAGES.map((lang) => (
-            <Pressable key={lang.key} onPress={() => setLanguage(lang.key)} style={[styles.langOption, language === lang.key && styles.langActive]}>
+            <Pressable key={lang.key} onPress={() => {
+              setLanguage(lang.key);
+              setLocale(lang.key);
+            }} style={[styles.langOption, language === lang.key && styles.langActive]}>
               <Text style={[Typography.body, { color: language === lang.key ? Colors.accent : Colors.textSecondary }]}>{lang.label}</Text>
             </Pressable>
           ))}

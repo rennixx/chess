@@ -1,5 +1,8 @@
 import { create } from "zustand";
 import { Chess, type Square } from "chess.js";
+import { saveGame } from "../core/storage/database";
+
+let currentGameId = "";
 
 export type GameStatus = "playing" | "checkmate" | "stalemate" | "draw" | "resigned";
 export type GameMode = "ai" | "async" | "local";
@@ -61,6 +64,8 @@ export const useGameStore = create<GameState & GameActions>((set, get) => ({
       legalMoves: [],
       lastMove: null,
     });
+    currentGameId = `local_${Date.now()}`;
+    saveGame({ id: currentGameId, fen: chess.fen(), mode, status: "playing" });
   },
 
   makeMove: ({ from, to, promotion }) => {
@@ -76,6 +81,14 @@ export const useGameStore = create<GameState & GameActions>((set, get) => ({
         selectedSquare: null,
         legalMoves: [],
         lastMove: { from, to },
+      });
+      saveGame({
+        id: currentGameId,
+        fen: state.chess.fen(),
+        pgn: state.chess.pgn(),
+        movesJson: JSON.stringify([...state.moveHistory, move.san]),
+        mode: state.gameMode,
+        status: newStatus,
       });
       return true;
     } catch {
